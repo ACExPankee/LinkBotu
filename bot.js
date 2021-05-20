@@ -173,6 +173,17 @@ client.on('message', msg => {
   }
 });
 
+const sosyal = new MessageEmbed()
+.setTitle('Sosyal Bilgiler Dersi')
+.addField('Giriş Linki', '[Girmek için buraya basınız](https://us04web.zoom.us/j/9505655039?pwd=NWFNM0dPRkZ6V2tUMmpUWGZ5Smhsdz09)')
+.addField('Manuel Giriş', 'ID: 950 565 5039 , ŞİFRE: 083783')
+
+client.on('message', msg => {
+  if (msg.content === '+ders sosyal') {
+    msg.channel.send(sosyal);
+  }
+});
+
 
 
 client.login('ODQzNjkwMTk0ODk3MDc2MjM1.YKHhuQ.8fqxg4U17R-rAOBZFGedWdMit3s');
